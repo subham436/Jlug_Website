@@ -7,27 +7,12 @@ padding: 0px;
 box-sizing: border-box;
 }
 
-@media only screen and (max-width: 600px) {
-  .layer{
-  position: relative;
-  bottom: 160px;
-  left: 25px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .row {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-}
 .layer{
   background: #ffde59;
   border: 2px  solid #000000;
   box-shadow: 15px 14px 5px 0 #ffbd59;
-
-  height: 100vh;
-
+  height: 80vh;
+  width: 550px;
   text-align: center;
 
   clip-path: polygon(0% 0%, /*left top */
@@ -62,18 +47,25 @@ box-sizing: border-box;
   padding-bottom:  60px;
   font-family: 'Calistoga';
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1.5;
 }
-
-.box > h1{
+.heading {
+  display: none;
+}
+.heading1 > h1{
   font-size: 3rem;
+  font-family: 'Calistoga';
+  text-align: center;
+}
+.heading > h1{
+  font-size: 3.5rem;
   font-family: 'Calistoga';
   text-align: center;
 }
 .box > h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-family: 'Open Sans';
 }
 .hand {
@@ -115,37 +107,50 @@ span{
       font-size: 1.6rem;
     }
   .layer > h1 {
-
     font-size: 2rem;
-    margin: 13px;
-
-
+    margin: 21px;
   }
   .layer {
     margin: 100px 100px;
+    width: 75%;
+    height: 100vh;
   }
 }
-
-
-
-
-.penguin {
-    position: absolute;
-
-
+@media only screen and (max-width: 719px) {
+  .heading {
+  display: block;
   }
+  .heading1 {
+    display: none;
+  }
+  .pngitem2{
+    display: none;
+  }
+}
+.pngitem1{
+  display: none;
+}
+@media only screen and (max-width: 719px) {
+  .tpr {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 791px) {
+  .pngitem1{
+    display: block;
+    width: 70%;
+  }
+}
+.tpr{
+  display: inline-flex;
+}
 @media only screen and (max-width: 600px) {
   .button {
       width: 75%;
-      position: absolute;
-      display: inline;
-    }
-}
-@media only screen and (max-width: 600px) {
-  .penguin {
-      width: 30%;
-      position: relative;
-      left: inherit;
+      align-items: center;
+      margin-right: 20px;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -222,11 +227,14 @@ span{
     .form-popup p{
       text-align: center;
       font-style: 'Open Sans';
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 ul{
   list-style-type: circle;
   margin: 0;
   padding: 0px;
   overflow: hidden;
+}
+.pngitem2{
+  margin-left: 10px;
 }
